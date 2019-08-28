@@ -35,6 +35,7 @@ export interface ImageDialogInfo {
   hasDescription: boolean;
   hasImageTitle: boolean;
   hasDimensions: boolean;
+  autoSetDimensions: boolean;
   hasImageCaption: boolean;
   isSourceDisabled: boolean;
   url: string;

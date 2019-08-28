@@ -166,7 +166,7 @@ const calculateImageSize = (helpers: Helpers, info: ImageDialogInfo, state: Imag
   const data = api.getData();
   const url = data.src.value;
   const meta = data.src.meta || {};
-  if (!meta.width && !meta.height && info.hasDimensions) {
+  if (!meta.width && !meta.height && info.hasDimensions && info.autoSetDimensions) {
     helpers.imageSize(url).get((result) => {
       result.each((size) => {
         if (state.open) {

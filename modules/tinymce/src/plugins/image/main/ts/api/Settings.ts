@@ -11,6 +11,10 @@ const hasDimensions = (editor: Editor) => {
   return editor.getParam('image_dimensions', true, 'boolean');
 };
 
+const autoSetDimensions = (editor: Editor) => {
+  return editor.getParam('image_dimensions_autoset', true, 'boolean');
+};
+
 const hasAdvTab = (editor: Editor) => {
   return editor.getParam('image_advtab', false, 'boolean');
 };
@@ -73,6 +77,7 @@ const getUploadCredentials = (editor: Editor) => {
 
 export default {
   hasDimensions,
+  autoSetDimensions,
   hasUploadTab,
   hasAdvTab,
   getPrependUrl,
