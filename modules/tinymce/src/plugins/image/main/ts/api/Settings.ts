@@ -39,6 +39,10 @@ const hasImageCaption = (editor: Editor) => {
   return editor.getParam('image_caption', false, 'boolean');
 };
 
+const isSourceDisabled = (editor: Editor) => {
+  return editor.getParam('image_source_disabled', false, 'boolean');
+};
+
 const getImageList = (editor: Editor) => {
   return editor.getParam('image_list', false);
 };
@@ -76,6 +80,7 @@ export default {
   hasDescription,
   hasImageTitle,
   hasImageCaption,
+  isSourceDisabled,
   getImageList,
   hasUploadUrl,
   hasUploadHandler,

@@ -36,6 +36,7 @@ export interface ImageDialogInfo {
   hasImageTitle: boolean;
   hasDimensions: boolean;
   hasImageCaption: boolean;
+  isSourceDisabled: boolean;
   url: string;
   basePath: string;
   credentials: boolean;

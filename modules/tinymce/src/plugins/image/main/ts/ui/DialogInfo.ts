@@ -41,6 +41,7 @@ const collect = (editor: Editor): Future<ImageDialogInfo> => {
   const hasImageTitle = Settings.hasImageTitle(editor);
   const hasDimensions = Settings.hasDimensions(editor);
   const hasImageCaption = Settings.hasImageCaption(editor);
+  const isSourceDisabled = Settings.isSourceDisabled(editor);
   const url = Settings.getUploadUrl(editor);
   const basePath = Settings.getUploadBasePath(editor);
   const credentials = Settings.getUploadCredentials(editor);
@@ -61,6 +62,7 @@ const collect = (editor: Editor): Future<ImageDialogInfo> => {
       hasImageTitle,
       hasDimensions,
       hasImageCaption,
+      isSourceDisabled,
       url,
       basePath,
       credentials,
