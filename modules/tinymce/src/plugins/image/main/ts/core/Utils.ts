@@ -135,7 +135,7 @@ const waitLoadImage = (editor: Editor, data: ImageData, imgElm: HTMLElement) => 
   };
 
   imgElm.onload = () => {
-    if (!data.width && !data.height && Settings.hasDimensions(editor)) {
+    if (!data.width && !data.height && Settings.hasDimensions(editor) && Settings.autoSetDimensions(editor)) {
       editor.dom.setAttribs(imgElm, {
         width: String(imgElm.clientWidth),
         height: String(imgElm.clientHeight)
